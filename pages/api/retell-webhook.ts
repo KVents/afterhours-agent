@@ -94,7 +94,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     `Summary: ${call_summary.matter_summary}\n` +
     `Urgency: ${call_summary.urgency} | Fit: ${call_summary.fit_decision}` +
     conflictLine +
-    `\nOpen log: https://your-app.vercel.app/lead/${lead.id}\n` +
+    `\nOpen log: https://afterhours-agent-alpha.vercel.app/dashboard\n` +
     `Tap to call: ${call_summary.phone}`;
 
   try {
