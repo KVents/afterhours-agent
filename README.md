@@ -26,6 +26,8 @@ Open this folder in Claude Code and work through the steps below in order.
    npm install
    cp .env.example .env   # then fill in the values from steps 1-2
    ```
+   To use the admin dashboard (step below), also set `DASHBOARD_PASSWORD` and
+   `SESSION_SECRET` in `.env` before visiting `/dashboard`.
 
 5. **Deploy**
    - Push this repo to GitHub, import into Vercel
@@ -46,20 +48,16 @@ Open this folder in Claude Code and work through the steps below in order.
      - Failed SMS lands in `retry_queue` (test by temporarily breaking the
        Twilio `from` number, then fixing it)
 
+## Admin dashboard
+
+Visit `/dashboard` (password-protected via `DASHBOARD_PASSWORD`) to view leads
+in a searchable, filterable table (practice_area, urgency, fit_decision) and
+export the current filtered view as CSV. Session cookies last 1 hour.
+
 ## What's NOT built yet (later phases)
 
-- Admin dashboard (view/filter/search/export leads, edit settings)
+- Editing settings from the admin dashboard
 - Retry queue processor (cron job to actually work through `retry_queue`)
 - Voicemail fallback flow
 - Call queuing for concurrent callers (use Twilio's native `<Enqueue>` — don't
   build this yourself)
-
-## Next Claude Code prompt to run
-
-Once you've done steps 1-3 above (accounts created, keys in `.env`), tell
-Claude Code:
-
-> "Install dependencies and verify the retell-webhook.ts route compiles.
-> Then build the admin dashboard: a passworded Next.js page at /dashboard
-> that lists leads from Supabase in a table, with filters for practice_area,
-> urgency, and fit_decision, a search box, and a CSV export button."

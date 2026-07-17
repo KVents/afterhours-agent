@@ -4,13 +4,10 @@
 // and texts the lawyer via Twilio. Queues a retry job if the SMS fails.
 
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { createClient } from '@supabase/supabase-js';
 import twilio from 'twilio';
+import { getSupabaseServerClient } from '../../lib/supabaseServer';
 
-const supabase = createClient(
-  process.env.SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY! // server-side only, never expose client-side
-);
+const supabase = getSupabaseServerClient();
 
 const twilioClient = twilio(
   process.env.TWILIO_ACCOUNT_SID!,
