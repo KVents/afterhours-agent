@@ -88,9 +88,14 @@ export default function Dashboard() {
     <div style={styles.page}>
       <div style={styles.header}>
         <h1 style={styles.title}>Leads</h1>
-        <button onClick={handleLogout} style={styles.logoutButton}>
-          Logout
-        </button>
+        <div style={styles.headerActions}>
+          <a href="/dashboard/settings" style={styles.settingsLink}>
+            Settings
+          </a>
+          <button onClick={handleLogout} style={styles.logoutButton}>
+            Logout
+          </button>
+        </div>
       </div>
 
       <div style={styles.controls}>
@@ -263,6 +268,12 @@ const styles: Record<string, React.CSSProperties> = {
     marginBottom: '1rem',
   },
   title: { margin: 0 },
+  headerActions: { display: 'flex', alignItems: 'center', gap: '0.75rem' },
+  settingsLink: {
+    color: '#2c3e50',
+    textDecoration: 'none',
+    fontSize: '0.9rem',
+  },
   logoutButton: {
     padding: '0.5rem 1rem',
     background: '#eee',
