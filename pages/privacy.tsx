@@ -30,10 +30,12 @@ export default function PrivacyPolicy() {
       <p>
         Phone numbers collected through this Service are used only to send internal
         lead-notification texts to the firm's own on-call staff — not to the callers
-        themselves. We do not sell, rent, or share mobile phone numbers with third
-        parties for their marketing purposes. Message frequency is one text per new
-        after-hours lead (not a recurring or promotional message stream). Message
-        and data rates may apply.
+        themselves. Mobile information and messaging consent are not shared with
+        third parties or affiliates for marketing or promotional purposes. Message
+        frequency is one text per new after-hours lead (not a recurring or
+        promotional message stream). Message and data rates may apply. Reply STOP
+        to unsubscribe at any time, or update the alert phone number directly in
+        the admin settings dashboard.
       </p>
 
       <h2>Third-party service providers</h2>
