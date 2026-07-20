@@ -1,8 +1,14 @@
+import Footer from '../components/Footer';
+
 export default function PrivacyPolicy() {
   return (
-    <div style={styles.page}>
-      <h1>Privacy Policy</h1>
-      <p style={styles.updated}>Last updated: July 2026</p>
+    <div style={styles.wrap}>
+      <div style={styles.page}>
+        <a href="/" style={styles.backLink}>
+          &larr; Back
+        </a>
+        <h1>Privacy Policy</h1>
+        <p style={styles.updated}>Last updated: July 2026</p>
 
       <p>
         This policy is issued by Krishang Patel, operator of this after-hours intake
@@ -57,20 +63,37 @@ export default function PrivacyPolicy() {
       <p>
         Questions about this policy can be sent to{' '}
         <a href="mailto:talk2krishang@gmail.com">talk2krishang@gmail.com</a>.
-      </p>
+        </p>
+      </div>
+      <Footer />
     </div>
   );
 }
 
 const styles: Record<string, React.CSSProperties> = {
+  wrap: {
+    minHeight: '100vh',
+    background: '#fff',
+    display: 'flex',
+    flexDirection: 'column',
+  },
   page: {
     fontFamily: 'system-ui, sans-serif',
     maxWidth: 720,
     margin: '0 auto',
-    padding: '2rem',
+    padding: '2rem 2rem 0',
     lineHeight: 1.6,
     color: '#111',
     background: '#fff',
+    flex: 1,
+    width: '100%',
   },
-  updated: { color: '#666', fontSize: '0.9rem' },
+  backLink: {
+    color: '#2c3e50',
+    textDecoration: 'none',
+    fontSize: '0.9rem',
+    display: 'inline-block',
+    marginBottom: '1rem',
+  },
+  updated: { color: '#888', fontSize: '0.9rem' },
 };
