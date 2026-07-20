@@ -5,9 +5,10 @@ export default function PrivacyPolicy() {
       <p style={styles.updated}>Last updated: July 2026</p>
 
       <p>
-        This after-hours intake system ("the Service") is operated for a single law
-        firm to triage calls received outside business hours. This policy describes
-        what information the Service collects and how it is used.
+        This policy is issued by Krishang Patel, operator of this after-hours intake
+        system ("the Service"), used by a single law firm to triage calls received
+        outside business hours. This policy describes what information the Service
+        collects and how it is used.
       </p>
 
       <h2>What we collect</h2>

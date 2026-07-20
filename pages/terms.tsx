@@ -5,10 +5,10 @@ export default function TermsOfService() {
       <p style={styles.updated}>Last updated: July 2026</p>
 
       <p>
-        This after-hours intake system ("the Service") is operated by a law firm to
-        triage calls received outside business hours using an AI voice agent. By
-        calling the after-hours line or using the admin dashboard, you agree to
-        these terms.
+        These terms are issued by Krishang Patel, operator of this after-hours
+        intake system ("the Service"), used by a law firm to triage calls received
+        outside business hours using an AI voice agent. By calling the after-hours
+        line or using the admin dashboard, you agree to these terms.
       </p>
 
       <h2>Nature of the Service</h2>
