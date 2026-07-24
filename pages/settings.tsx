@@ -87,6 +87,28 @@ export default function Settings() {
             <button type="submit" disabled={saving} style={styles.button}>
               {saving ? 'Saving…' : 'Save'}
             </button>
+
+            <div style={styles.consentBox}>
+              <p style={styles.consentText}>
+                <strong>Consent to receive SMS alerts.</strong> This number belongs
+                to you, the account administrator for this after-hours intake
+                system — you are the sole recipient of these messages. By entering
+                your number and clicking Save, you consent to receive automated
+                after-hours lead-alert text messages from this system at that
+                number. Message frequency varies with call volume (typically a
+                few messages per week). Message and data rates may apply. Reply
+                STOP to unsubscribe at any time, or remove your number on this
+                page. See our{' '}
+                <a href="/privacy" style={styles.consentLink}>
+                  Privacy Policy
+                </a>{' '}
+                and{' '}
+                <a href="/terms" style={styles.consentLink}>
+                  Terms of Service
+                </a>
+                .
+              </p>
+            </div>
           </form>
         )}
       </div>
@@ -141,4 +163,13 @@ const styles: Record<string, React.CSSProperties> = {
     cursor: 'pointer',
     alignSelf: 'flex-start',
   },
+  consentBox: {
+    marginTop: '1.5rem',
+    padding: '1rem',
+    background: '#fafafa',
+    border: '1px solid #eee',
+    borderRadius: 8,
+  },
+  consentText: { fontSize: '0.8rem', color: '#666', lineHeight: 1.6, margin: 0 },
+  consentLink: { color: '#2c3e50' },
 };
